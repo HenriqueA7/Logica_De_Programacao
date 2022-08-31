@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<!--O programa exibe todos os anos de Copa do Mundo até o ano informado pelo usuário-->
+
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	alert("Quer saber em quais anos houve, ou haverá Copa do Mundo até determinado ano? Vamos descobrir!")
+
+	var limite = parseInt(prompt("Entre com a data limite (Formato YYYY)"));
+	
+	var anoCopa = 1930;
+
+	const dataAtual = new Date();
+
+	const anoAtual = dataAtual.getFullYear();
+
+	while(anoCopa <= limite && anoCopa < anoAtual) {
+
+		mostra("Teve copa em " + anoCopa);
+		anoCopa = anoCopa + 4;		
+	}
+
+	if(anoCopa = anoAtual) {
+				mostra("Tem copa em " + anoAtual);
+				anoCopa = anoCopa + 4;
+	}
+
+	while(anoCopa <= limite && anoCopa > anoAtual) {
+
+		mostra("Terá copa em " + anoCopa);
+		anoCopa = anoCopa + 4;		
+	}
+
+
+	mostra("FIM");
+	
+</script>
+
+
+
+

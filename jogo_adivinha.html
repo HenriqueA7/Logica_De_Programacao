@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<!--O objetivo do jogo é gerar um número aleatório entre 0 e 9, e o usuário adivinhar este número em até 3 tentativas-->
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var numeroPensado = Math.round(Math.random() * 10) ;
+
+	var tentativas = 1;
+	
+	alert("Você tem três tentativas para acertar o número escolhido, entre 0 e 9. Vamos começar?")
+
+	while(tentativas <= 3) {
+
+		var chute = parseInt(prompt("Digite seu chute!"));
+
+		if(chute == numeroPensado) {
+
+			mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+			break;
+
+		} else {
+			
+			mostra("Você ERROU!");
+		}
+
+		tentativas++;
+	}
+
+	mostra("FIM");
+
+
+</script>
+
+
+
+
